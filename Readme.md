@@ -230,7 +230,7 @@ After initializing your Git repository and adding your `AWS-IAM-Manager.sh`, the
 **Screenshots:** creation of Git Repository
 ![Create New Repository](./Images/13.create_new_repos.png)
 
-![Git Add Remote](./Images/13.git_remote_add.png)
+![Git Add Remote](./Images/13c.git_remote_add.png)
 
 - Link Your Local Repository to GitHub: In your terminal, within your project directory, add the remote repository URL to your local repository configuration.
 
