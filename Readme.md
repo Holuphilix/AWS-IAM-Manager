@@ -1,4 +1,4 @@
-# Shell Script for AWS IAM Management
+# Capstone Project: Shell Script for AWS IAM Management
 
 ## Introduction
 
@@ -79,7 +79,7 @@ For Windows:
 **Screenshot:** Run the script:
 ![Run Script](./Images/7.Run.script.png)
 
-#### 3. Create IAM Users
+#### Task 4. Create IAM Users
    - Iterate through the `iam_users` array and create IAM users using the following AWS CLI command:
 
 **Screenshot:** The script to iterate through the iam_users array and create IAM users.
@@ -88,7 +88,7 @@ For Windows:
 **Screenshot:** Execute the updated script:
 ![Run the Script](./Images/8.Run_script_IAM_users.png)
 
-#### 4. Create IAM Group
+#### Task 5. Create IAM Group
 - Define a function in the script to create an IAM group named `admin`:
 
 **Screenshot:** Add a function to create the admin group.
@@ -97,7 +97,7 @@ For Windows:
 **Screenshot:** Run the script:
 ![Run the Script](./Images/10.Create_IAM_group_run_script.png)
 
-#### 5. Attach Administrative Policy to Group
+#### Task 6. Attach Administrative Policy to Group
 - Attach the `AdministratorAccess` policy to the `admin` group:
   
 **Screenshot:** Extend the script to attach the AdministratorAccess policy to the group:
@@ -106,7 +106,7 @@ For Windows:
 **Screenshot:** Run the Script:
 ![Run Script](./Images/11.attach_admin_policy_run_script.png)
 
-#### 6. Assign Users to Group
+#### Task 7. Assign Users to Group
 - Iterate through the `iam_users` array and add each user to the `admin` group:
 
 **Screenshot:** Finally, add a section to assign the IAM users to the admin group:
@@ -115,10 +115,11 @@ For Windows:
 **Screenshot:** Run the Script:
 ![Run Script](./Images/12.Assign_user_to_group_run_script.png)
 
-### Project Deliverables
-#### 1. **Comprehensive Documentation**
+#### Task 8. Project Deliverables
 
-#### **Thought Process**
+#### Step 8.1: **Comprehensive Documentation**
+
+ **Thought Process**
 
 The primary goal of this project was to automate AWS Identity and Access Management (IAM) tasks using Bash scripting to ensure consistency, reduce manual effort, and avoid human errors. The key functionalities included creating IAM users, managing groups, and assigning policies.
 
@@ -141,7 +142,7 @@ To achieve these goals, I structured the script as follows:
    - Add users to the group.
 
 
-#### **Challenges and Solutions**
+#### Step 8.2: **Challenges and Solutions**
 
 1. **Challenge**: **Handling Duplicate User Creation**
    - **Problem**: If a user already exists, the script would fail with an error.
@@ -160,7 +161,7 @@ To achieve these goals, I structured the script as follows:
    - **Solution**: Use the AWS CLI documentation to ensure the correct policy ARN is used (e.g., `arn:aws:iam::aws:policy/AdministratorAccess`).
 
 
-#### **Solutions Implemented in the Script**
+#### Step 8.3: **Solutions Implemented in the Script**
 
 1. **IAM User Creation**:
    - Used an array to store user names for iteration.
@@ -190,18 +191,18 @@ fi
 4. **Logging and Outputs**:
    - Added `echo` statements for each step to provide real-time feedback.
 
-#### **Script Highlights**
+#### Step 8.4: **Script Highlights**
 
 - **Modularity**: Divided the script into reusable functions for creating users, groups, and attaching policies.
 - **Scalability**: Using an array allows easy addition or removal of users.
 - **Efficiency**: Automating repetitive tasks saves time and minimizes errors.
 - **Transparency**: Clear logging and outputs help track script progress.
 
-#### 2.**Uploading the Script to GitHub and Linking for Remote Execution**
+#### Task 9. **Uploading the Script to GitHub and Linking for Remote Execution**
 
 #### **Steps to Upload My Script to GitHub**
 
-**1. Stage and Commit the Template to Git**
+**step 9.1: Stage and Commit the Template to Git**
 
 In this step, I will add the website files to the Git repository, configure my global Git settings, and make an initial commit with a descriptive message.
 
@@ -217,19 +218,23 @@ git config --global user.name "holuphilix"
 git config --global user.email "oluphilix@gmail.com"
 git commit -m "Initial commit: AWS IAM Manager script for automating user, group, and policy management"
 
-   - Named the repository `AWS-IAM-Manager` to reflect its purpose.
-   - Added a description to highlight that this is a shell script for automating AWS IAM management tasks.
-   - Set the repository to public (optional, based on my preference) and clicked **Create Repository**.
+**Screenshot:** Git Add and Git Config
+![Git Add and Commit](./Images/13b.Git_add_commit.png)
 
-**Screenshot:** creation of Git Repository
+**Step 9.2: Push the code to your Github repository**
+
+After initializing your Git repository and adding your `AWS-IAM-Manager.sh`, the next step is to push your code to a remote repository on GitHub. This step is crucial for version control and collaboration.
+
+- Create a Remote Repository on GitHub: Log into your GitHub account and create a new repository named `AWS-IAM-Manager`. Leave the repository empty without initializing it with a README, .gitignore, or license.
+
+**Screenshots:** creation of Git Repository
 ![Create New Repository](./Images/13.create_new_repos.png)
 
-1. Link Your Local Repository to GitHub: In your terminal, within your project directory, add the remote repository URL to your local repository configuration.
-
-2. Push Your Code: Upload Your Local Repository Content to GitHub Once you have linked your local repository to GitHub, use the following command to push your commits from your local main branch to the remote repository. This enables you to store your project in the cloud and share it with others.
-
-**Screenshot:**
 ![Git Add Remote](./Images/13.git_remote_add.png)
+
+- Link Your Local Repository to GitHub: In your terminal, within your project directory, add the remote repository URL to your local repository configuration.
+
+- Push Your Code: Upload Your Local Repository Content to GitHub Once you have linked your local repository to GitHub, use the following command to push your commits from your local main branch to the remote repository. This enables you to store your project in the cloud and share it with others.
 
 **Commands:**
  ```bash
@@ -237,13 +242,18 @@ git remote add origin https://github.com/Holuphilix/AWS-IAM-Manager.git
 git branch -M main
 git push -u origin main
 ```
+***Screenshot:** Git Push to origin Main
+![Git Push to Orign Main](./Images/13d.Git_push_origin_main.png)
 
-1. **Share My GitHub Repository Link**:
-   - Once uploaded, I shared my repository link:  
-     [AWS IAM Manager Script](https://github.com/holuphilix/AWS-IAM-Manager).
+**Step 9.3: Share My GitHub Repository Link**:
+- Once uploaded, I shared my repository link:  
 
-#### **Why I Hosted My Script on GitHub**
-- **Version Control**: I can track changes and manage updates easily.
-- **Collaboration**: I can share the script with others for feedback or contributions.
-- **Accessibility**: My script is accessible anytime and from anywhere.
-- **Documentation**: I included a README file to guide users on how to use the script.
+ ```bash
+https://github.com/holuphilix/AWS-IAM-Manager
+```
+
+#### Benefits of Hosting the Script on GitHub
+- **Version Control:** Allows tracking changes and rolling back if needed.
+- **Collaboration:** Facilitates contributions from other team members or collaborators.
+- **Accessibility:** Provides a central location for accessing and downloading the script.
+- **Documentation:** GitHub’s README file can serve as a detailed guide for usage and configuratio
